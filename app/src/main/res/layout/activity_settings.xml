@@ -6,4 +6,95 @@
     android:layout_height="match_parent"
     tools:context=".SettingsActivity">
 
+    <TextView
+        android:id="@+id/tvPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Players"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvCourts"
+        app:layout_constraintTop_toBottomOf="@+id/tvCourts" />
+
+    <EditText
+        android:id="@+id/editTextPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPlayers"
+        app:layout_constraintStart_toStartOf="@+id/editTextCourts" />
+
+    <EditText
+        android:id="@+id/editTextPreisJePlatz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:autofillHints="preis-je-platz"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPreisJePlatz"
+        app:layout_constraintStart_toEndOf="@+id/barrierTextVields" />
+
+    <TextView
+        android:id="@+id/tvCourts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Courts"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayers"
+        app:layout_constraintStart_toStartOf="@+id/tvPreisJePlatz"
+        app:layout_constraintTop_toBottomOf="@+id/tvPreisJePlatz" />
+
+    <TextView
+        android:id="@+id/tvPreisJePlatz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Preis je Platz"
+        app:layout_constraintBottom_toTopOf="@+id/tvCourts"
+        app:layout_constraintStart_toStartOf="@+id/guidelineTextFields"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/editTextCourts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvCourts"
+        app:layout_constraintStart_toStartOf="@+id/editTextPreisJePlatz" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPlayers"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPlayers" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierTextVields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="tvPreisJePlatz,tvCourts,tvPlayers"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextFields"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="7dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
