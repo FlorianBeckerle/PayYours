@@ -1,11 +1,15 @@
 package com.example.payyours
 
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -21,7 +25,9 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.menu_item_settings ->{
                 Log.d("MainActivity", "Settings menu called")
-                startActivity(Intent(this, SettingsActivity::class.java))
+                val intent = Intent(Context, SettingsActivity::class.java)
+                getResult.launch(intent)
+                //registerActivit(Intent(this, SettingsActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -33,4 +39,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+    //Reciver
+    private val getResult =
+            registerForActivityResult(
+                ActivityResultContracts.StartActivityForResult()
+            ) {
+                payment = SettingsActivity.getStoredPayment(this)
+                if(it.resultCode == Activity.RESULT_OK) {
+                    Log.d("", "test")
+                }
+            }
+
+
 }
