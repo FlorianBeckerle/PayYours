@@ -7,12 +7,106 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvPlaetze"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="50dp"
+        android:text="Plätze"
+        app:layout_constraintBottom_toTopOf="@+id/tvSpieler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvSpieler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Spieler"
+        app:layout_constraintBottom_toTopOf="@+id/tvBetrag"
+        app:layout_constraintStart_toStartOf="@+id/tvPlaetze"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlaetze" />
+
+    <TextView
+        android:id="@+id/tvBetrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Betrag"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/tvSpieler"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpieler" />
+
+    <EditText
+        android:id="@+id/editTextPlaetze"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="38dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Plätze"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvPlaetze"
+        app:layout_constraintStart_toEndOf="@+id/middleBarrier" />
+
+    <EditText
+        android:id="@+id/editTextSpieler"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Spieler"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSpieler"
+        app:layout_constraintStart_toStartOf="@+id/editTextPlaetze" />
+
+    <Button
+        android:id="@+id/btPlaetzePlus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextPlaetze"
+        app:layout_constraintStart_toEndOf="@+id/editTextPlaetze" />
+
+    <Button
+        android:id="@+id/btPlaetzeMinus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btPlaetzePlus"
+        app:layout_constraintStart_toEndOf="@+id/btPlaetzePlus" />
+
+    <Button
+        android:id="@+id/btSpielerMinus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btSpielerPlus"
+        app:layout_constraintStart_toStartOf="@+id/btPlaetzeMinus" />
+
+    <Button
+        android:id="@+id/btSpielerPlus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextSpieler"
+        app:layout_constraintStart_toStartOf="@+id/btPlaetzePlus" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/middleBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tvSpieler,tvPlaetze,tvBetrag"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <TextView
+        android:id="@+id/tvBetragWert"
+        android:layout_width="45dp"
+        android:layout_height="19dp"
+        android:text="-1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBetrag"
+        app:layout_constraintStart_toStartOf="@+id/btSpielerPlus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
