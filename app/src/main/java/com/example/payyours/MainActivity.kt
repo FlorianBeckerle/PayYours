@@ -1,5 +1,6 @@
 package com.example.payyours
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.menu_item_settings ->{
                 Log.d("MainActivity", "Settings menu called")
+                startActivity(Intent(this, SettingsActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
