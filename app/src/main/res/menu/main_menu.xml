@@ -7,10 +7,10 @@
         android:id="@+id/menu_item_settings"
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="Settings"
-        app:showAsAction="always" />
+        app:showAsAction="always"></item>
     <item
         android:id="@+id/menu_item_quit"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:title="Exit"
-        app:showAsAction="always" />
+        app:showAsAction="always"></item>
 </menu>

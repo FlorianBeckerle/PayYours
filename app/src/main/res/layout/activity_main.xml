@@ -6,107 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvPlaetze"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="50dp"
-        android:text="Plätze"
-        app:layout_constraintBottom_toTopOf="@+id/tvSpieler"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
-        android:id="@+id/tvSpieler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:text="Spieler"
-        app:layout_constraintBottom_toTopOf="@+id/tvBetrag"
-        app:layout_constraintStart_toStartOf="@+id/tvPlaetze"
-        app:layout_constraintTop_toBottomOf="@+id/tvPlaetze" />
-
-    <TextView
-        android:id="@+id/tvBetrag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Betrag"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tvSpieler"
-        app:layout_constraintTop_toBottomOf="@+id/tvSpieler" />
-
-    <EditText
-        android:id="@+id/editTextPlaetze"
-        android:layout_width="149dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="38dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="Plätze"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvPlaetze"
-        app:layout_constraintStart_toEndOf="@+id/middleBarrier" />
-
-    <EditText
-        android:id="@+id/editTextSpieler"
-        android:layout_width="149dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="number"
-        android:text="Spieler"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvSpieler"
-        app:layout_constraintStart_toStartOf="@+id/editTextPlaetze" />
 
     <Button
-        android:id="@+id/btPlaetzePlus"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="18dp"
+        android:id="@+id/spielerPlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:text="+"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextPlaetze"
-        app:layout_constraintStart_toEndOf="@+id/editTextPlaetze" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/spielerEingabe"
+        app:layout_constraintStart_toStartOf="@+id/plaetzePlus" />
 
     <Button
-        android:id="@+id/btPlaetzeMinus"
-        android:layout_width="48dp"
+        android:id="@+id/spielerMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spielerPlus"
+        app:layout_constraintStart_toStartOf="@+id/plaetzeMinus" />
+
+    <TextView
+        android:id="@+id/plaetze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Plätze"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/betrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Betrag"
+        app:layout_constraintStart_toStartOf="@+id/spieler"
+        app:layout_constraintTop_toBottomOf="@+id/spieler" />
+
+    <EditText
+        android:id="@+id/plaetzeEingabe"
+        android:layout_width="123dp"
         android:layout_height="48dp"
         android:layout_marginStart="15dp"
-        android:text="-"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btPlaetzePlus"
-        app:layout_constraintStart_toEndOf="@+id/btPlaetzePlus" />
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/plaetze"
+        app:layout_constraintStart_toEndOf="@+id/barrier3" />
 
-    <Button
-        android:id="@+id/btSpielerMinus"
-        android:layout_width="48dp"
+    <EditText
+        android:id="@+id/spielerEingabe"
+        android:layout_width="123dp"
         android:layout_height="48dp"
-        android:text="-"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btSpielerPlus"
-        app:layout_constraintStart_toStartOf="@+id/btPlaetzeMinus" />
-
-    <Button
-        android:id="@+id/btSpielerPlus"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="+"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextSpieler"
-        app:layout_constraintStart_toStartOf="@+id/btPlaetzePlus" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/middleBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="tvSpieler,tvPlaetze,tvBetrag"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="56dp" />
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/spieler"
+        app:layout_constraintStart_toStartOf="@+id/plaetzeEingabe" />
 
     <TextView
-        android:id="@+id/tvBetragWert"
-        android:layout_width="45dp"
-        android:layout_height="19dp"
-        android:text="-1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvBetrag"
-        app:layout_constraintStart_toStartOf="@+id/btSpielerPlus" />
+        android:id="@+id/spieler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Spieler"
+
+        app:layout_constraintStart_toStartOf="@+id/plaetze"
+        app:layout_constraintTop_toBottomOf="@+id/plaetze" />
+
+    <Button
+        android:id="@+id/plaetzePlus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/plaetzeEingabe"
+        app:layout_constraintStart_toEndOf="@+id/plaetzeEingabe" />
+
+    <Button
+        android:id="@+id/plaetzeMinus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/plaetzePlus"
+        app:layout_constraintStart_toEndOf="@+id/plaetzePlus" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="plaetze,betrag,spieler"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="59dp" />
+
+    <TextView
+        android:id="@+id/betragErgebnis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/betrag"
+        app:layout_constraintStart_toStartOf="@+id/spielerPlus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
