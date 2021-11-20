@@ -11,7 +11,7 @@
         android:id="@+id/spielerPlus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="+"
+        android:text="@string/btn_plus"
         app:layout_constraintBaseline_toBaselineOf="@+id/spielerEingabe"
         app:layout_constraintStart_toStartOf="@+id/plaetzePlus" />
 
@@ -19,7 +19,7 @@
         android:id="@+id/spielerMinus"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="-"
+        android:text="@string/btn_minus"
         app:layout_constraintBaseline_toBaselineOf="@+id/spielerPlus"
         app:layout_constraintStart_toStartOf="@+id/plaetzeMinus" />
 
@@ -28,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Plätze"
+        android:text="@string/courts"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Betrag"
+        android:text="@string/to_pay"
         app:layout_constraintStart_toStartOf="@+id/spieler"
         app:layout_constraintTop_toBottomOf="@+id/spieler" />
 
@@ -48,7 +48,7 @@
         android:layout_marginStart="15dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:text="@string/et_courts"
         app:layout_constraintBaseline_toBaselineOf="@+id/plaetze"
         app:layout_constraintStart_toEndOf="@+id/barrier3" />
 
@@ -58,7 +58,7 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="number"
-        android:text="0"
+        android:text="@string/et_players"
         app:layout_constraintBaseline_toBaselineOf="@+id/spieler"
         app:layout_constraintStart_toStartOf="@+id/plaetzeEingabe" />
 
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Spieler"
+        android:text="@string/txt_players"
 
         app:layout_constraintStart_toStartOf="@+id/plaetze"
         app:layout_constraintTop_toBottomOf="@+id/plaetze" />
@@ -77,7 +77,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
-        android:text="+"
+        android:text="@string/btn_plus"
         app:layout_constraintBaseline_toBaselineOf="@+id/plaetzeEingabe"
         app:layout_constraintStart_toEndOf="@+id/plaetzeEingabe" />
 
@@ -86,7 +86,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
-        android:text="-"
+        android:text="@string/btn_minus"
         app:layout_constraintBaseline_toBaselineOf="@+id/plaetzePlus"
         app:layout_constraintStart_toEndOf="@+id/plaetzePlus" />
 
@@ -109,7 +109,7 @@
         android:id="@+id/betragErgebnis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/betrag"
         app:layout_constraintStart_toStartOf="@+id/spielerPlus" />
 

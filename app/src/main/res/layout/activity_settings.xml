@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="Preis je Platz"
+        android:text="@string/txt_price_per_unit"
         app:layout_constraintBottom_toTopOf="@+id/tvCourts"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="Plätze"
+        android:text="@string/txt_courts"
         app:layout_constraintBottom_toTopOf="@+id/tvPlayers"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/tvPricePerCourt" />
@@ -31,7 +31,7 @@
         android:id="@+id/tvPlayers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Players"
+        android:text="@string/txt_players"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/tvCourts" />
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
-        android:text="Button"
+        android:text="@string/bt_ok"
         app:layout_constraintEnd_toEndOf="@+id/editTextPlayers"
         app:layout_constraintTop_toBottomOf="@+id/editTextPlayers" />
 
@@ -53,7 +53,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="0"
+        android:text="@string/price_per_unit"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvPricePerCourt"
         app:layout_constraintStart_toStartOf="@+id/barrier2"
         android:autofillHints="preis-je-platz" />
@@ -66,7 +66,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="0"
+        android:text="@string/txt_default_courts"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvCourts"
         app:layout_constraintStart_toStartOf="@+id/barrier2" />
 
@@ -78,7 +78,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="0"
+        android:text="@string/txt_default_players"
         app:layout_constraintBaseline_toBaselineOf="@+id/tvPlayers"
         app:layout_constraintStart_toStartOf="@+id/barrier2" />
 

@@ -3,7 +3,9 @@ package at.htl.leonding.payyours
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_settings.*
 import java.text.DecimalFormat
 import java.util.*
@@ -43,6 +45,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         buttonOK.setOnClickListener { onSave() }
+
         val payment = getStoredPayment(this)
         editTextPricePerCourt.setText("${payment.pricePerUnitText}")
         editTextPlayers.setText("${payment.players}")
